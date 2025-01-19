@@ -39,7 +39,7 @@ const LoginPage = () => {
   const signIn = async (email, password) => {
     try {
       await axios
-        .post(Traft_Login_Api, { email, password })
+        .post(Traft_Login_Api, { email, password },{ withCredentials: true })
         .then((response) => {
           console.log(response.data);
           if (response.data == "Error") {
